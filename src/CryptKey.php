@@ -45,6 +45,8 @@ class CryptKey
         }
 
         // Verify the permissions of the key
+        /*
+        disable chmod for now.
         $keyPathPerms = decoct(fileperms($keyPath) & 0777);
         if ($keyPathPerms !== '600') {
             // Attempt to correct the permissions
@@ -60,6 +62,7 @@ class CryptKey
                 // @codeCoverageIgnoreEnd
             }
         }
+        */
 
         $this->keyPath = $keyPath;
         $this->passPhrase = $passPhrase;
